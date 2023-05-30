@@ -1,5 +1,44 @@
 # @astrojs/markdoc
 
+## 0.2.4
+
+### Patch Changes
+
+- [#7187](https://github.com/withastro/astro/pull/7187) [`1efaef6be`](https://github.com/withastro/astro/commit/1efaef6be0265c68eac706623778e8ad23b33247) Thanks [@bholmesdev](https://github.com/bholmesdev)! - Add support for syntax highlighting with Shiki. Apply to your Markdoc config using the `extends` property:
+
+  ```js
+  // markdoc.config.mjs
+  import { defineMarkdocConfig } from '@astrojs/markdoc/config';
+  import shiki from '@astrojs/markdoc/shiki';
+
+  export default defineMarkdocConfig({
+    extends: [
+      shiki({
+        /** Shiki config options */
+      }),
+    ],
+  });
+  ```
+
+  Learn more in the [`@astrojs/markdoc` README.](https://docs.astro.build/en/guides/integrations-guide/markdoc/#syntax-highlighting)
+
+- [#7209](https://github.com/withastro/astro/pull/7209) [`16b836411`](https://github.com/withastro/astro/commit/16b836411980f18c58ca15712d92cec1b3c95670) Thanks [@bholmesdev](https://github.com/bholmesdev)! - Add a built-in extension for syntax highlighting with Prism. Apply to your Markdoc config using the `extends` property:
+
+  ```js
+  // markdoc.config.mjs
+  import { defineMarkdocConfig } from '@astrojs/markdoc/config';
+  import prism from '@astrojs/markdoc/prism';
+
+  export default defineMarkdocConfig({
+    extends: [prism()],
+  });
+  ```
+
+  Learn more in the [`@astrojs/markdoc` README.](https://docs.astro.build/en/guides/integrations-guide/markdoc/#syntax-highlighting)
+
+- Updated dependencies [[`8b041bf57`](https://github.com/withastro/astro/commit/8b041bf57c76830c4070330270521e05d8e58474), [`6c7df28ab`](https://github.com/withastro/astro/commit/6c7df28ab34b756b8426443bf6976e24d4611a62), [`7851f9258`](https://github.com/withastro/astro/commit/7851f9258fae2f54795470253df9ce4bcd5f9cb0), [`52af9ad18`](https://github.com/withastro/astro/commit/52af9ad18840ffa4e2996386c82cbe34d9fd076a), [`cf621340b`](https://github.com/withastro/astro/commit/cf621340b00fda441f4ef43196c0363d09eae70c), [`2bda7fb0b`](https://github.com/withastro/astro/commit/2bda7fb0bce346f7725086980e1648e2636bbefb), [`af3c5a2e2`](https://github.com/withastro/astro/commit/af3c5a2e25bd3e7b2a3f7f08e41ee457093c8cb1), [`f2f18b440`](https://github.com/withastro/astro/commit/f2f18b44055c6334a39d6379de88fe41e518aa1e)]:
+  - astro@2.5.6
+
 ## 0.2.3
 
 ### Patch Changes
